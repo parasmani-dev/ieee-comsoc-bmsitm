@@ -6,12 +6,51 @@
 <meta name="description" content="Explore radio hardware, student projects, chapter committees and the magazine at the IEEE Communications Society Student Branch Chapter.">
 <meta name="theme-color" content="#091f32">
 <link rel="icon" href="assets/ieee.ico"><link rel="stylesheet" href="style.css">
-<script src="hardware.js" defer></script><script src="chapter.js" defer></script>
+<link rel="stylesheet" href="radio.css">
+<script type="module" src="assets/radio/model-viewer.min.js"></script>
+<script src="hardware.js" defer></script><script src="radio-parts.js" defer></script><script src="studio.js" defer></script><script src="chapter.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="loader" id="loader" aria-hidden="true" hidden><canvas width="160" height="120"></canvas><span>RF TRANSCEIVER</span><i></i></div>
-<header>
+<main id="main">
+<section id="home" class="radio-stage" aria-labelledby="hero-title">
+  <div class="studio-top">
+    <span class="studio-brand">IEEE ComSoc <span>/</span> Signal lab</span>
+    <a href="#chapter-nav">Enter chapter</a>
+  </div>
+  <div id="instrument" class="studio-model">
+    <div class="render-poster" aria-hidden="true"><img src="assets/radio/transceiver.webp" alt="" fetchpriority="high"></div>
+    <model-viewer id="radio-model" src="assets/radio/transceiver.glb"
+      alt="Three-dimensional RF transceiver board with four gold SMA connectors, a central radio chip, and a digital header"
+      camera-controls auto-rotate auto-rotate-delay="0" rotation-per-second="6deg" animation-name="Inspect assembly"
+      camera-orbit="28deg 38deg 64%" min-camera-orbit="auto 16deg 30%" max-camera-orbit="auto 155deg 170%"
+      field-of-view="29deg" min-field-of-view="23deg" max-field-of-view="40deg"
+      shadow-intensity=".72" shadow-softness=".9" exposure=".94" environment-image="neutral"
+      interaction-prompt="none" disable-pan disable-tap touch-action="pan-y" loading="eager" reveal="auto">
+      <div slot="poster" class="clear-poster"></div>
+      <span id="part-marker" slot="hotspot-selection" data-position="0m .001m 0m" aria-hidden="true" hidden></span>
+      <span class="port-tag" slot="hotspot-port" data-position="-0.026m 0.006m 0.027m" data-normal="0m 1m 0m" data-visibility-attribute="visible" aria-hidden="true">TX1</span>
+    </model-viewer>
+    <div class="studio-loading" role="status" hidden>Loading 3D model</div>
+  </div>
+  <aside class="part-card" id="part-card" aria-label="Component properties" hidden>
+    <div class="card-head"><span class="micro" id="part-group"></span><button type="button" id="card-close" aria-label="Close component inspection">×</button></div>
+    <label for="part-picker" class="part-picker-label">Inspect component</label>
+    <select id="part-picker"></select>
+    <div aria-live="polite"><p id="part-description"></p><dl id="part-properties"></dl></div>
+    <a id="part-source" hidden>Manufacturer specifications</a>
+  </aside>
+  <div class="studio-foot">
+    <div class="studio-caption"><h1 id="hero-title">RF transceiver<span>.</span></h1><p id="signal-path" aria-live="polite">Baseband → RF → Antenna</p></div>
+    <div class="studio-controls"><span id="orbit-hint">Select a component</span>
+      <button id="burst-toggle" type="button" aria-expanded="false" aria-controls="part-card">Explode view</button>
+      <div class="zoom-controls" role="group" aria-label="Model magnification" hidden><button id="zoom-out" type="button" aria-label="Zoom out">−</button><button id="zoom-in" type="button" aria-label="Zoom in">+</button></div>
+      <div class="radio-modes" role="group" aria-label="Signal direction"><button type="button" data-mode="tx" aria-pressed="true">TX</button><button type="button" data-mode="rx" aria-pressed="false">RX</button></div>
+      <button id="rotation-toggle" type="button" aria-label="Pause rotation" title="Pause rotation" hidden><span aria-hidden="true">Ⅱ</span></button>
+    </div>
+  </div>
+</section>
+<header id="chapter-nav">
 <nav class="network" aria-label="IEEE network"><div class="wrap"><a href="https://www.ieee.org/">IEEE.org</a><a href="https://ieeexplore.ieee.org/">IEEE Xplore</a><a href="https://standards.ieee.org/">IEEE Standards</a><a href="https://spectrum.ieee.org/">IEEE Spectrum</a><a href="https://www.ieee.org/sitemap.html">More sites</a></div></nav>
 <div class="wrap mast">
 <a href="#home" class="brand"><span class="logo-slot" aria-label="Chapter logo placeholder">Logo</span><span><strong>IEEE ComSoc</strong><small data-college>[College name]</small></span></a>
@@ -20,15 +59,6 @@
 <button id="search-open" class="search-icon" aria-label="Search this website" hidden></button>
 <a class="network-logo" href="https://www.comsoc.org/"><img src="assets/ieee-comsoc.png" alt="IEEE Communications Society"></a>
 </div></header>
-<main id="main">
-<section class="hero" id="home" aria-labelledby="hero-title"><div class="wrap hero-grid">
-<div class="hero-copy"><p class="eyebrow light"><b></b> Student branch chapter</p><h1 id="hero-title">The signal<br><em>lab.</em></h1>
-<p class="intro">Explore the hardware, networks and people behind wireless communication at the IEEE Communications Society student chapter.</p>
-<div class="actions"><a class="btn primary" href="#about">Explore the chapter</a><a class="btn outline" href="#magazine">Chapter magazine</a></div></div>
-<figure class="instrument" id="instrument"><div class="instrument-head"><span class="micro">RF transceiver</span><span class="micro sub">Hardware explorer</span></div>
-<div class="drawing"><canvas id="board" width="1000" height="660" role="img" aria-label="Isometric radio board showing the radio-frequency transceiver between baseband and the antenna.">A radio transceiver prepares a signal for transmission and processes signals received by the antenna.</canvas><span class="axis axis-x">X</span><span class="axis axis-y">Y</span></div>
-<figcaption><div class="mode" aria-label="Signal direction" role="group"><button data-mode="tx" aria-pressed="true">TX</button><button data-mode="rx" aria-pressed="false">RX</button></div><span id="signal-path" aria-live="polite">Baseband → RF → Antenna</span></figcaption></figure>
-</div></section>
 <section class="section wrap" id="about"><div class="section-heading"><div><p class="eyebrow"><b></b> About the chapter</p><h2>Communications, hands-on.</h2></div><p>From the antenna that captures a signal to the networks that carry it, explore how an idea travels from one device to another.</p></div>
 <div class="fields"><article><span class="field-icon wave" aria-hidden="true">∿</span><h3>Radio &amp; wireless</h3><p>Trace a signal through a transceiver and see what changes between transmit and receive.</p><details><summary>How a transceiver works</summary><p>On transmit, it converts a baseband signal to radio frequency. On receive, it converts the incoming radio signal back to baseband for processing.</p><a href="https://developer.analog.com/docs/system-level/tools/pluto/users/understanding/">Explore a working radio design</a></details></article>
 <article><span class="field-icon nodes" aria-hidden="true">⌘</span><h3>Student projects</h3><p>Explore radio streaming and satellite weather reception through two student engineering projects.</p><a href="#projects">Explore projects</a></article>
