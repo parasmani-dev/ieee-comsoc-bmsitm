@@ -33,10 +33,117 @@
 <div class="fields"><article><span class="field-icon wave" aria-hidden="true">∿</span><h3>Radio &amp; wireless</h3><p>Trace a signal through a transceiver and see what changes between transmit and receive.</p><details><summary>How a transceiver works</summary><p>On transmit, it converts a baseband signal to radio frequency. On receive, it converts the incoming radio signal back to baseband for processing.</p><a href="https://developer.analog.com/docs/system-level/tools/pluto/users/understanding/">Explore a working radio design</a></details></article>
 <article><span class="field-icon nodes" aria-hidden="true">⌘</span><h3>Student projects</h3><p>Explore radio streaming and satellite weather reception through two student engineering projects.</p><a href="#projects">Explore projects</a></article>
 <article><span class="field-icon" aria-hidden="true">▤</span><h3>Chapter life</h3><p>Meet the executive and volunteer committees, browse events and find the chapter magazine.</p><a href="#team">Meet the committees</a></article></div></section>
-<section id="projects" class="section pale"><div class="wrap"><p class="eyebrow"><b></b> Projects</p><h2>From the workbench.</h2><p class="section-lead">Two communications projects from the supplied BMSIT chapter archive.</p>
-<div class="project-grid"><article class="project"><div class="project-art orbit-art" aria-hidden="true"><div class="planet"></div><i></i><i></i><i></i></div><div><small class="micro">Satellite reception</small><h3>SkyPulse</h3><p>A student-built weather project that combines satellite signals received by software-defined radio with local sensor readings.</p><a href="https://skypulse-comsoc.netlify.app/">Explore SkyPulse</a></div></article>
-<article class="project"><div class="project-art audio-art" aria-hidden="true"><canvas id="audio" width="650" height="150"></canvas></div><div><small class="micro">Internet radio</small><h3>Campus Radio Station</h3><p>An online station built around an Icecast streaming server for live student broadcasts and recorded programmes.</p><a href="https://comsocbmsit.wixsite.com/home">Visit the project archive</a></div></article></div></div></section>
-<section id="events" class="section wrap"><p class="eyebrow"><b></b> Events</p><h2>On the calendar.</h2><div class="event-block"><div><h3>Upcoming events</h3><p>The chapter’s next event date will appear here once confirmed.</p></div><div><h3>From the BMSIT archive</h3><details id="powerplay"><summary>ComSoc PowerPlay <time datetime="2025-05-28">28 May 2025</time></summary><p>Students paired a cricket-themed quiz with broadcast decoding and a Raspberry Pi–LoRa buzzer system.</p></details><details id="showcase"><summary>COMP-SIF Open Day <time datetime="2025-03-21">21 March 2025</time></summary><p>The student team demonstrated SkyPulse and the campus radio station at its open-day exhibit.</p></details></div></div></section>
+<section id="projects" class="section pale"><div class="wrap"><p class="eyebrow"><b></b> Projects</p><h2>From the workbench.</h2><p class="section-lead">Explore the chapter’s satellite weather network and student-run internet radio station.</p>
+<div class="project-grid"><article class="project" data-archive-entry="project" id="skypulse"><div class="project-art orbit-art" aria-hidden="true"><div class="planet"></div><i></i><i></i><i></i></div><div><small class="micro">Satellite reception</small><h3>SkyPulse</h3><p>Launched in November 2024, SkyPulse combines satellite observations with a LoRaWAN weather network to study Bengaluru’s microclimates. It tracks local weather and urban heat for short-range forecasting.</p><details class="project-facts"><summary>Project details</summary><dl><div><dt>LoRaWAN weather nodes</dt><dd>16</dd></div><div><dt>Coverage radius around Bengaluru</dt><dd>~45 km</dd></div><div><dt>EPICS in IEEE grant</dt><dd>USD 8,100</dd></div><div><dt>City-scale deployment target</dt><dd>Aug 2026</dd></div></dl><p>Satellite data, LoRaWAN, Nowcasting, Smart city</p></details><a href="https://skypulse-comsoc.netlify.app/">Explore SkyPulse</a></div></article>
+<article class="project" data-archive-entry="project" id="campus-radio-station"><div class="project-art audio-art" aria-hidden="true"><canvas id="audio" width="650" height="150"></canvas></div><div><small class="micro">Internet radio</small><h3>Campus Radio Station</h3><p>A student-built app connects to an Icecast server for live broadcasts, recorded programmes and campus announcements. The team chose online streaming after exploring the licensing and spectrum requirements of campus FM.</p><details class="project-facts"><summary>Project details</summary><dl><div><dt>Streaming backend</dt><dd>Icecast</dd></div><div><dt>No FM licence or spectrum needed</dt><dd>Online</dd></div><div><dt>Programs and campus announcements</dt><dd>Live + recorded</dd></div></dl><p>Icecast streaming, Online-first, Student-led</p></details><a href="https://comsocbmsit.wixsite.com/home">Visit the project archive</a></div></article></div></div></section>
+<section id="events" class="section wrap">
+<p class="eyebrow"><b></b> Events</p><h2>Chapter event archive.</h2>
+<nav class="archive-years" aria-label="Browse events by year"><a href="#events-2026">2026</a><a href="#events-2025">2025</a><a href="#events-2024">2024</a></nav>
+<section class="archive-year" id="events-2026" aria-labelledby="year-2026"><h3 id="year-2026">2026</h3><div>
+<details class="archive-event" id="bits2wave" data-archive-entry="event" data-record="bits2wave" open>
+  <summary><span class="entry-title">Bits2Wave</span><span class="entry-date">21–22 November 2026 · Bengaluru</span></summary>
+  <div class="event-content"><div><span class="micro">National hackathon</span><p>College students entered in teams of two to four. Shortlisted teams had 24 hours on campus to turn their idea into a working prototype and pitch it to the judges.</p>
+    <a href="https://bits2wave.vercel.app/">Visit the Bits2Wave event website</a>
+  </div>
+  </div></details>
+<details class="archive-event" id="protocol-heist-2026" data-archive-entry="event" data-record="protocol-heist-2026">
+  <summary><span class="entry-title">Protocol Heist</span><span class="entry-date">October 2026 · Scheduled</span></summary>
+  <div class="event-content"><div><span class="micro">Networking challenge</span><p>A scenario-based competition on network layers, protocol decoding, system design and troubleshooting.</p>
+  </div>
+  </div></details>
+<details class="archive-event" id="satquest-2026" data-archive-entry="event" data-record="satquest-2026">
+  <summary><span class="entry-title">SatQuest</span><span class="entry-date">September 2026 · Scheduled</span></summary>
+  <div class="event-content"><div><span class="micro">Hands-on programme</span><p>A three-day programme on software-defined radio, satellite communication and embedded IoT, with exercises in signal decoding and microcontroller integration.</p>
+  </div>
+  </div></details>
+<details class="archive-event" id="open-day-2026" data-archive-entry="event" data-record="open-day-2026">
+  <summary><span class="entry-title">Open Day</span><span class="entry-date">March 2026</span></summary>
+  <div class="event-content"><div><span class="micro">Open day</span><p>Live demonstrations and student project displays introduced visitors to communication technologies and chapter activities.</p>
+  </div>
+  </div></details>
+<details class="archive-event" id="excom-2026-unveiling" data-archive-entry="event" data-record="excom-2026-unveiling">
+  <summary><span class="entry-title">Executive Committee 2026 Unveiling</span><span class="entry-date">2026</span></summary>
+  <div class="event-content"><div><span class="micro">Chapter announcement</span><p>The chapter introduced the executive committee for its 2026 term and marked the leadership handover.</p>
+  </div>
+  </div></details>
+</div></section>
+<section class="archive-year" id="events-2025" aria-labelledby="year-2025"><h3 id="year-2025">2025</h3><div>
+<details class="archive-event" id="bhumi-campus-award-2025" data-archive-entry="event" data-record="bhumi-campus-award-2025">
+  <summary><span class="entry-title">Bhumi Campus Award 2025 – Best Innovative Social Initiative</span><span class="entry-date">13 December 2025 · Chennai</span></summary>
+  <div class="event-content"><div><span class="micro">Award</span><p>SkyPulse received recognition in the Best Innovative Social Initiative category for its use of satellite data to support local weather monitoring.</p>
+  </div>
+    <img src="assets/events/bhumi-campus-award-2025.webp" width="960" height="696" loading="lazy" alt="Archive image for Bhumi Campus Award 2025 – Best Innovative Social Initiative">
+  </div></details>
+<details class="archive-event" id="winter-of-projects-2025" data-archive-entry="event" data-record="winter-of-projects-2025">
+  <summary><span class="entry-title">Winter of Projects (WoP) 2025</span><span class="entry-date">October–December 2025</span></summary>
+  <div class="event-content"><div><span class="micro">Prototyping programme</span><p>Thirty-six teams selected problem statements through an auction, built prototypes with mentors and presented their work at the Stark Expo.</p>
+  </div>
+    <img src="assets/events/winter-of-projects-2025.webp" width="960" height="647" loading="lazy" alt="Archive image for Winter of Projects (WoP) 2025">
+  </div></details>
+<details class="archive-event" id="fnwf-2025" data-archive-entry="event" data-record="fnwf-2025">
+  <summary><span class="entry-title">IEEE Future Networks World Forum (FNWF) 2025</span><span class="entry-date">10–12 November 2025 · Bengaluru</span></summary>
+  <div class="event-content"><div><span class="micro">Research forum</span><p>Student members presented lightning talks and posters on SkyPulse and power management for edge IoT. The forum explored the transition from 5G to 6G and AI-native networks.</p>
+  </div>
+    <img src="assets/events/fnwf-2025.webp" width="960" height="649" loading="lazy" alt="Archive image for IEEE Future Networks World Forum (FNWF) 2025">
+  </div></details>
+<details class="archive-event" id="imc-2025" data-archive-entry="event" data-record="imc-2025">
+  <summary><span class="entry-title">India Mobile Congress 2025 – SkyPulse Showcase</span><span class="entry-date">8–11 October 2025 · New Delhi</span></summary>
+  <div class="event-content"><div><span class="micro">Technology showcase</span><p>The SkyPulse exhibit demonstrated how a 16-node observation network combines satellite data and ground measurements to forecast local weather.</p>
+  </div>
+    <img src="assets/events/imc-2025.webp" width="960" height="622" loading="lazy" alt="Archive image for India Mobile Congress 2025 – SkyPulse Showcase">
+  </div></details>
+<details class="archive-event" id="hydrolens" data-archive-entry="event" data-record="hydrolens">
+  <summary><span class="entry-title">HydroLens – Satellite River Basin Analytics</span><span class="entry-date">9 September 2025 · Launch</span></summary>
+  <div class="event-content"><div><span class="micro">Satellite analytics</span><p>HydroLens launched as an initiative focused on satellite-based analysis of river basins.</p>
+  </div>
+    <img src="assets/events/hydrolens.webp" width="960" height="639" loading="lazy" alt="Archive image for HydroLens – Satellite River Basin Analytics">
+  </div></details>
+<details class="archive-event" id="powerplay" data-archive-entry="event" data-record="comsoc-powerplay-2025">
+  <summary><span class="entry-title">ComSoc PowerPlay 2025</span><span class="entry-date">28 May 2025</span></summary>
+  <div class="event-content"><div><span class="micro">Technical quiz</span><p>Teams tackled spectrum auctions and broadcast decoding in a cricket-themed quiz, using a custom Raspberry Pi and LoRa buzzer system.</p>
+  </div>
+    <img src="assets/events/comsoc-powerplay-2025.webp" width="960" height="668" loading="lazy" alt="Archive image for ComSoc PowerPlay 2025">
+  </div></details>
+<details class="archive-event" id="showcase" data-archive-entry="event" data-record="comp-sif-2025">
+  <summary><span class="entry-title">IEEE COMP-SIF 2025 – Open Day Showcase</span><span class="entry-date">21 March 2025</span></summary>
+  <div class="event-content"><div><span class="micro">Open day showcase</span><p>Students demonstrated SkyPulse hardware and the Campus Radio Station, shared the chapter magazine and discussed their work with IEEE visitors.</p>
+  </div>
+    <img src="assets/events/comp-sif-2025.webp" width="960" height="646" loading="lazy" alt="Archive image for IEEE COMP-SIF 2025 – Open Day Showcase">
+  </div></details>
+<details class="archive-event" id="kill-switch" data-archive-entry="event" data-record="kill-switch">
+  <summary><span class="entry-title">Kill Switch – Technical Investigation Challenge</span><span class="entry-date">2025</span></summary>
+  <div class="event-content"><div><span class="micro">Technical investigation</span><p>Teams used circuit analysis, digital logic and signal processing to solve engineering clues in a fictional investigation.</p>
+  </div>
+    <img src="assets/events/kill-switch.webp" width="960" height="608" loading="lazy" alt="Archive image for Kill Switch – Technical Investigation Challenge">
+  </div></details>
+<details class="archive-event" id="wop-2025-deep-tech-build" data-archive-entry="event" data-record="wop-2025-deep-tech-build">
+  <summary><span class="entry-title">WoP 2025 – Mentor-Led Deep Tech Build</span><span class="entry-date">2025</span></summary>
+  <div class="event-content"><div><span class="micro">Mentored build</span><p>Students designed and built an L-band antenna tracker for low Earth orbit satellites, integrating mechanics, electronics, control systems and live tracking.</p>
+  </div>
+    <img src="assets/events/wop-2025-deep-tech-build.webp" width="960" height="654" loading="lazy" alt="Archive image for WoP 2025 – Mentor-Led Deep Tech Build">
+  </div></details>
+<details class="archive-event" id="skypulse-epics-inauguration" data-archive-entry="event" data-record="skypulse-epics-inauguration">
+  <summary><span class="entry-title">Project SkyPulse – EPICS Workspace Inauguration</span><span class="entry-date">2025</span></summary>
+  <div class="event-content"><div><span class="micro">Workspace inauguration</span><p>The EPICS in IEEE workspace brought together the SkyPulse observation network, satellite ground station and radio-data processing work in Bengaluru.</p>
+  </div>
+    <img src="assets/events/skypulse-epics-inauguration.webp" width="960" height="673" loading="lazy" alt="Archive image for Project SkyPulse – EPICS Workspace Inauguration">
+  </div></details>
+</div></section>
+<section class="archive-year" id="events-2024" aria-labelledby="year-2024"><h3 id="year-2024">2024</h3><div>
+<details class="archive-event" id="mission-spectrum-2024" data-archive-entry="event" data-record="mission-spectrum-2024">
+  <summary><span class="entry-title">Mission Spectrum</span><span class="entry-date">December 2024</span></summary>
+  <div class="event-content"><div><span class="micro">Signal decoding challenge</span><p>Participants decoded Morse and amplitude-shift keyed signals, analysed spectra and implemented logic circuits using oscilloscopes, Audacity and Python FFT tools.</p>
+  </div>
+    <img src="assets/events/mission-spectrum-2024.webp" width="960" height="643" loading="lazy" alt="Archive image for Mission Spectrum">
+  </div></details>
+<details class="archive-event" id="ieee-skypulse" data-archive-entry="event" data-record="ieee-skypulse">
+  <summary><span class="entry-title">IEEE SkyPulse</span><span class="entry-date">December 2024</span></summary>
+  <div class="event-content"><div><span class="micro">Weather monitoring initiative</span><p>The team used RTL-SDR receivers and IoT sensors to decode METEOR and NOAA satellite transmissions for weather maps and storm tracking.</p>
+  </div>
+    <img src="assets/events/ieee-skypulse.webp" width="960" height="630" loading="lazy" alt="Archive image for IEEE SkyPulse">
+  </div></details>
+</div></section>
+</section>
 <section id="magazine" class="mag"><div class="wrap magazine-grid"><div class="cover-stage"><div class="cover" aria-hidden="true"><span class="cover-top">CHAPTER MAGAZINE</span><strong>Dhwani</strong><canvas id="print" width="520" height="470"></canvas><span class="cover-bottom">COVER PREVIEW</span></div></div><div><p class="eyebrow light"><b></b> Magazine shelf</p><h2>Dhwani<span>.</span></h2><p class="mag-desc">A space for the chapter’s magazine. The published issue and its cover will appear here when the editorial team shares them.</p><div class="issue-state" id="issue-status">Chapter issue forthcoming</div><a class="btn paper" id="issue-link" href="https://nitblit.github.io/Dhwani/">Explore Dhwani</a></div></div></section>
 <section id="team" class="section wrap"><p class="eyebrow"><b></b> People</p><h2>Behind the chapter.</h2><div class="team-grid"><article><p class="micro">Executive committee</p><h3>ExeCom</h3><p>Chapter leadership, planning and coordination.</p><ul id="execom"><li>Faculty advisor <span>To be announced</span></li><li>Chair <span>To be announced</span></li><li>Secretary <span>To be announced</span></li></ul></article><article><p class="micro">Volunteer committee</p><h3>VolCom</h3><p>Student volunteers supporting chapter activities.</p><ul id="volcom"><li>Technical volunteers <span>To be announced</span></li><li>Editorial volunteers <span>To be announced</span></li><li>Event volunteers <span>To be announced</span></li></ul></article></div></section>
 <section id="contact" class="join"><div class="wrap join-inner"><div><p class="eyebrow"><b></b> Membership &amp; contact</p><h2>Get involved.</h2><p id="contact-line">Chapter contact details will be added here.</p></div><div class="actions"><a class="btn blue" href="https://www.ieee.org/membership/join/">Join IEEE</a><a class="btn secondary" href="https://www.comsoc.org/membership">ComSoc membership</a></div></div></section>

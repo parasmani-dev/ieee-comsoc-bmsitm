@@ -58,10 +58,11 @@ const dialog=get("#search"), query=get("#query"), results=get("#results");
 const searchable=[
   ["Radio transceiver · TX and RX","#instrument","radio hardware baseband antenna wireless transmit receive"],
   ["About the chapter","#about","IEEE Communications Society student branch "+chapter.college],
-  ["Projects · SkyPulse and Campus Radio","#projects","satellite weather streaming software-defined radio Icecast"],
-  ["Upcoming events","#events","calendar workshops"],
-  ["ComSoc PowerPlay","#powerplay","28 May 2025 event quiz buzzer LoRa"],
-  ["COMP-SIF Open Day","#showcase","21 March 2025 event SkyPulse campus radio"],
+  ["Chapter event archive","#events","calendar workshops events by year"],
+  ...Array.from(document.querySelectorAll("[data-archive-entry]"), entry => {
+    const title = entry.querySelector("h3, .entry-title").textContent;
+    return [title, "#" + entry.id, entry.dataset.archiveEntry + " " + entry.textContent];
+  }),
   ["Dhwani · Chapter magazine","#magazine","publication editorial issue cover "+issue.issueTitle],
   ...["execom","volcom"].map((group,i)=>[i?"VolCom · Volunteer committee":"ExeCom · Executive committee","#"+group,chapter[group].map(person=>person.role+" "+person.name).join(" ")]),
   ["Membership and contact","#contact","join volunteer email IEEE ComSoc"]
